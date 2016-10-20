@@ -68,7 +68,7 @@ Please review below code.
 import { CountdownService, countdownOptions, countdownData } from 'ng2-coundown/index';
 @Component({
   selector: 'my-app',
-  template: `<h1>My First Angular App</h1>
+  template: `<h1>My First Angular App</h1>`
 })
 export class AppComponent {
 	constructor(private _countdownService: CountdownService) {
@@ -127,3 +127,6 @@ export class AppComponent {
 Above code will show two countdowns. first with 10 seconds and second with 20 seconds.
 You could define onStart and  onComplete events on every countdown element, and it will run as well when counter starts or completes. Inorder if anyone want to perform anything when counter ends. And they are independent of each other, Every counter have its on events.
 
+
+# License
+ [MIT](/LICENSE)
