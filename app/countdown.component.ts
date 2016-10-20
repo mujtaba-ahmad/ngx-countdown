@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, OnChanges, Output, EventEmitter } from '@angular/core';
-import { Subscription }   from 'rxjs/Subscription';
 
 import { CountdownService, countdownData, countdownOptions } from './countdown.service';
 
@@ -18,7 +17,6 @@ export class CountdownComponent implements OnInit, OnChanges {
     private finishTime: number;
     private timer: any;
 	private theme: string;
-    private subscription: Subscription;
     private countdown: countdownData;
     private date: string;
     constructor(private _countdownService: CountdownService) {
