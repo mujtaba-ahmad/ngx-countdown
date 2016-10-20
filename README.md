@@ -24,7 +24,7 @@ map: {
 ```js
 packages: {
       //...
-      'ng2-youtube': {
+      'ng2-countdown': {
         main: './index.js',
         defaultExtension: 'js'
       }
@@ -59,6 +59,8 @@ Adding this sevice in ngModule make it accessible in whole project. and mainly i
 
 ### 4 Set `CountdownOptions` for you application
 Now we need to set countdownOptions like theme, time format, onStart callback and onComplete callback. in our main Component like AppComponent in my case.
+  - format supported
+  	-All formats uptill days. for example hh:mm:ss, h:m:s etc
 If you use onStart and onComplete callback here they will be generic and will be called on start and on complete of countdown. and will return countdown object. Will explain countdown object in a while.
 
 you should call setCoundownOptions() function and pass countdownOptions object as parameter in setCoundownOptions(countdownOptions). Else countdownOptions wont appear.
