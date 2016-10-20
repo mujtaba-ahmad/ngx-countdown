@@ -9,36 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var counter_service_1 = require('./counter.service');
+var countdown_service_1 = require('./countdown.service');
 var AppComponent = (function () {
-    function AppComponent(_counterService) {
-        this._counterService = _counterService;
-        var counterOptions = {
+    function AppComponent(_countdownService) {
+        this._countdownService = _countdownService;
+        var countdownOptions = {
             theme: 'material',
             format: "hh:mm:ss",
-            onStart: function (counter) {
-                console.log('Toast ' + counter.timeInterval + ' has been started!');
+            onStart: function (countdown) {
+                console.log('count ' + countdown.timeInterval + ' has been started!');
             },
-            onComplete: function (counter) {
-                console.log('Toast ' + counter.timeInterval + ' has been completed!');
+            onComplete: function (countdown) {
+                console.log('count ' + countdown.timeInterval + ' has been completed!');
             }
         };
-        _counterService.setCoundownOptions(counterOptions);
+        _countdownService.setCoundownOptions(countdownOptions);
     }
     AppComponent.prototype.ngOnInit = function () {
     };
-    AppComponent.prototype.onStart = function (counter) {
-        console.log('counter ' + counter.timeInterval + ' has been started!');
+    AppComponent.prototype.onStart = function (countdown) {
+        console.log('countdown ' + countdown.object + ' has been started!');
     };
-    AppComponent.prototype.onComplete = function (counter) {
-        console.log('counter ' + counter.timeInterval + ' has been started!');
+    AppComponent.prototype.onComplete = function (countdown) {
+        console.log('countdown ' + countdown.object + ' has been started!');
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>My First Angular App</h1>\n  \t\t\t <countdown [time]=\"'10'\" (onStart)=\"onStart($event)\" (onComplete)=\"onComplete($event)\"></countdown>\n\t\t\t <countdown [time]=\"'20'\"></countdown>"
+            template: "<h1>My First Angular App</h1>\n  \t\t\t <countdown [time]=\"'10'\" [object]=\"'1'\" (onStart)=\"onStart($event)\" (onComplete)=\"onComplete($event)\"></countdown>\n\t\t\t <countdown [time]=\"'20'\" [object]=\"'2'\" ></countdown>"
         }), 
-        __metadata('design:paramtypes', [counter_service_1.CounterService])
+        __metadata('design:paramtypes', [countdown_service_1.CountdownService])
     ], AppComponent);
     return AppComponent;
 }());

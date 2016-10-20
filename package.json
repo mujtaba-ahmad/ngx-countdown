@@ -1,5 +1,5 @@
 {
-  "name": "ng2-youtube",
+  "name": "ng2-countdown",
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",

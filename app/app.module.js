@@ -11,17 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
-var counter_component_1 = require('./counter.component');
-var counter_service_1 = require('./counter.service');
+var countdown_component_1 = require('./countdown.component');
+var countdown_service_1 = require('./countdown.service');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, counter_component_1.CounterComponent],
+            declarations: [app_component_1.AppComponent, countdown_component_1.CountdownComponent],
             bootstrap: [app_component_1.AppComponent],
-            providers: [counter_service_1.CounterService]
+            providers: [countdown_service_1.CountdownService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

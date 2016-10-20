@@ -1,60 +1,61 @@
 import { Injectable } from '@angular/core';
 import { Subject }    from 'rxjs/Subject';
 
-export interface counterOptions {
+export interface countdownOptions {
   theme?: string;
   format?: string;
   onStart?: Function;
   onComplete?: Function;
 }
 
-export interface counterData {
+export interface countdownData {
     timeInterval: number;
     theme: string;
     format: string;
+    object: any;
     onStart: Function;
     onComplete: Function;
 }
 
 @Injectable()
-export class CounterService {
+export class CountdownService {
     
     static THEMES: Array<string> = ['default', 'material', 'bootstrap'];
-    private uniqueCounter: number = 0;
-    private counterOptions: counterOptions;
+    private uniquecountdown: number = 0;
+    private countdownOptions: countdownOptions;
 
     constructor() {
-        this.counterOptions = {
+        this.countdownOptions = {
             theme: "default",
             format: "hh : mm : ss"
         }
     }
 
-    setCoundownOptions(options: counterOptions) {
-        let counterOptions: counterOptions;
-        counterOptions = options;
-        counterOptions = counterOptions || {
+    setCoundownOptions(options: countdownOptions) {
+        let countdownOptions: countdownOptions;
+        countdownOptions = options;
+        countdownOptions = countdownOptions || {
             theme: "default",
             format: "hh : mm : ss"
         };
         let theme: string;
-        if (counterOptions.theme) {
-            theme = CounterService.THEMES.indexOf(counterOptions.theme) > -1 ? counterOptions.theme : "defult";
+        if (countdownOptions.theme) {
+            theme = CountdownService.THEMES.indexOf(countdownOptions.theme) > -1 ? countdownOptions.theme : "defult";
         } else {
             theme = "default";
         }
 
         let format: string;
-        if (!counterOptions.format) {
+        if (!countdownOptions.format) {
             format = "hh : mm : ss"
         }
         else {
-            format = counterOptions.format;
+            format = countdownOptions.format;
         }
-        this.counterOptions =  counterOptions;
+        this.countdownOptions =  countdownOptions;
     }
     getCountdwnOptions() {
-        return this.counterOptions;
+        return this.countdownOptions;
     }
     dhms(s, f) { // seconds, format
         var d = 0;

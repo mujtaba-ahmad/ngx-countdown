@@ -2,14 +2,14 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { AppComponent }   from './app.component';
-import { CounterComponent } from './counter.component';
-import { CounterService } from './counter.service';
+import { CountdownComponent } from './countdown.component';
+import { CountdownService } from './countdown.service';
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent, CounterComponent ],
+  declarations: [ AppComponent, CountdownComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ CounterService ]
+  providers: [ CountdownService ]
 })
 
 export class AppModule { }
