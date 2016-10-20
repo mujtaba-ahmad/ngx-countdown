@@ -9,6 +9,14 @@
     "tsc:w": "tsc -w",
     "typings": "typings"
   },
+  "keywords": [
+    "countdown",
+    "bootstrap",
+    "material",
+    "angular2",
+    "angular 2",
+    "ng2"
+  ],
   "license": "ISC",
   "dependencies": {
     "@angular/common": "~2.0.0",
