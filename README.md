@@ -44,7 +44,7 @@ Import Components in the NgModule of your application as shown below:
 ```ts
 import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from '@angular/core';
-import {ToasterComponent, ToastComponent, ToasterAppComponent} from 'ng2-coundown/index';
+import {CountdownService, countdownOptions, countdownData} from 'ng2-countdown/index';
 
 @NgModule({
     imports: [ BrowserModule ],
@@ -67,7 +67,7 @@ you should call setCoundownOptions() function and pass countdownOptions object a
 
 Please review below code.
 ```ts
-import { CountdownService, countdownOptions, countdownData } from 'ng2-coundown/index';
+import { CountdownService, countdownOptions, countdownData } from 'ng2-countdown/index';
 @Component({
   selector: 'my-app',
   template: `<h1>My First Angular App</h1>`
