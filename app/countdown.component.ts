@@ -3,7 +3,6 @@ import { Component, Input, OnInit, OnChanges, Output, EventEmitter } from '@angu
 import { CountdownService, countdownData, countdownOptions } from './countdown.service';
 
 @Component({
-    moduleId: module.id,
     selector: 'countdown',
     templateUrl: './countdown.component.html'
 })
