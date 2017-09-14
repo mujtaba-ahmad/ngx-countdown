@@ -3,7 +3,6 @@ import { Component, Input, OnInit, OnChanges, Output, EventEmitter } from '@angu
 import { CountdownService, countdownData, countdownOptions } from './countdown.service';
 
 @Component({
-    moduleId: module.id,
     selector: 'countdown',
     templateUrl: './countdown.component.html'
 })
@@ -14,6 +13,7 @@ export class CountdownComponent implements OnInit, OnChanges {
     @Output() onStart = new EventEmitter<countdownData>();
     @Output() onComplete = new EventEmitter<countdownData>();
     @Input() object: any;
+	@Input() singleFormat : string;
     private finishTime: number;
     private timer: any;
 	private theme: string;
@@ -40,7 +40,7 @@ export class CountdownComponent implements OnInit, OnChanges {
         this.countdown = {
             timeInterval    : this.time,
             object: this.object,
-            format  : countdownOptions.format,
+            format  : this.singleFormat || countdownOptions.format,
             theme    : countdownOptions.theme + '-countdown-timer',
             onStart    : countdownOptions.onStart && this.isFunction(countdownOptions.onStart) ? countdownOptions.onStart : null,
             onComplete : countdownOptions.onComplete && this.isFunction(countdownOptions.onComplete) ? countdownOptions.onComplete : null
