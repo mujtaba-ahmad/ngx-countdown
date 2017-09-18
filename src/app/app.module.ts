@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CountDownComponent } from './count-down/count-down.component';
+import { CountDownService } from './services/count-down.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { CountDownComponent } from './count-down/count-down.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CountDownService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
