@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CountDownService, ICountdownOptions, ICountdownData } from './services/count-down.service';
+import { CountDownService, ICountdownOptions, ICountdownData } from './modules/services/count-down.service';
 
 @Component({
   selector: 'app-root',
