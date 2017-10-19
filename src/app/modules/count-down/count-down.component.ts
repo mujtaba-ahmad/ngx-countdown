@@ -17,8 +17,8 @@ export class CountDownComponent implements OnInit {
   @Output() onStart = new EventEmitter<string>();
   @Output() onComplete = new EventEmitter<string>();
   @Input() object: any;
-	@Input() singleFormat : string;
-
+	@Input() singleFormat: string;
+  @Input() selectedtheme: string = "default";
   constructor(private _countDownService: CountDownService) {}
   ngOnInit() {
     this.startCountDown();
@@ -33,7 +33,7 @@ export class CountDownComponent implements OnInit {
       timeInterval: this.time,
       object:     this.object,
       format:     this.singleFormat || countdownOptions.format,
-      theme:      countdownOptions.theme + '-countdown-timer',
+      theme:      this.selectedtheme + '-countdown-timer' || countdownOptions.theme + '-countdown-timer',
       onStart:    countdownOptions.onStart && this.isFunction(countdownOptions.onStart) ? countdownOptions.onStart : null,
       onComplete: countdownOptions.onComplete && this.isFunction(countdownOptions.onComplete) ? countdownOptions.onComplete : null
     };
