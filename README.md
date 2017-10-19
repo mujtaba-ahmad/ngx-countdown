@@ -47,7 +47,7 @@ You can customize it further like this below
 <app-count-down [time]="'15'" [object]="'2'" [singleFormat]="'hh-mm-ss'" (onStart)="onStart($event)" (onComplete)="onComplete($event)" [selectedtheme]="'material'"></app-count-down>
 ```
 - singleFormat format your timer, you can customize in whatever format you e.g. "hh:mm:ss", "hh-mm-ss" etc
-- selectedtheme help to change themes. There are two theme available for now
+- selectedtheme help to change theme. There are two themes available for now
   - default
   - material
 - onStart method run when timer starts. You can use it to add functionality when timer starts. For that you have to add onStart method in component.ts file.
