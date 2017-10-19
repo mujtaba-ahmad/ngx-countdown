@@ -20,7 +20,7 @@ Follow these steps:
   import { NgModule } from '@angular/core';
 
   import { AppComponent } from './app.component';
-  import { CountDownModule } from "ngx-countdown";
+  import { CountDownModule } from "ngx-countdown";      <-----
 
   @NgModule({
     declarations: [
@@ -28,7 +28,7 @@ Follow these steps:
     ],
     imports: [
       BrowserModule,
-      CountDownModule
+      CountDownModule           <-----
     ],
     providers: [],
     bootstrap: [AppComponent]
@@ -41,11 +41,12 @@ adding CountDownModule in NgModule make it accessible in whole project.
 ```html
   <app-count-down [time]="'10'" [object]="'2'" [singleFormat]="'hh:mm:ss'"></app-count-down>
 ```
-add above selector to any component.html file, will pop-up countdown of 10 seconds.
+add above selector to any component.html file, will pops-up countdown of 10 seconds.
 You can customize it further like this below
 ```html
 <app-count-down [time]="'15'" [object]="'2'" [singleFormat]="'hh-mm-ss'" (onStart)="onStart($event)" (onComplete)="onComplete($event)" [selectedtheme]="'material'"></app-count-down>
 ```
+- singleFormat format your timer, you can customize in whatever format you e.g. "hh:mm:ss", "hh-mm-ss" etc
 - selectedtheme help to change themes. There are two theme available for now
   - default
   - material
@@ -77,7 +78,6 @@ Above Code will pops-up countdown of 15 seconds with 'hh-mm-ss' format, and mate
 
 You can add multiple timers in single component like this
 
-TS File
 ```ts
   import { Component } from '@angular/core';
 
@@ -103,7 +103,7 @@ TS File
     }
   }
 ```
-HTML File
+
 ```html
   <app-count-down [time]="'10'" [singleFormat]="'hh-mm-ss'" (onStart)="onStart1()" (onComplete)="onComplete1()" [selectedtheme]="'material'"></app-count-down>
 
