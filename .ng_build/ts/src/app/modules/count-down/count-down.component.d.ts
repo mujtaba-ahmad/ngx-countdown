@@ -13,6 +13,7 @@ export declare class CountDownComponent implements OnInit {
     onComplete: EventEmitter<string>;
     object: any;
     singleFormat: string;
+    selectedtheme: string;
     constructor(_countDownService: CountDownService);
     ngOnInit(): void;
     isFunction(data: any): boolean;

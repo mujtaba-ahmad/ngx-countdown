@@ -92,6 +92,7 @@ var CountDownComponent = (function () {
         this.date = " - ";
         this.onStart = new core.EventEmitter();
         this.onComplete = new core.EventEmitter();
+        this.selectedtheme = "default";
     }
     /**
      * @return {?}
@@ -116,7 +117,7 @@ var CountDownComponent = (function () {
             timeInterval: this.time,
             object: this.object,
             format: this.singleFormat || countdownOptions.format,
-            theme: countdownOptions.theme + '-countdown-timer',
+            theme: this.selectedtheme + '-countdown-timer' || countdownOptions.theme + '-countdown-timer',
             onStart: countdownOptions.onStart && this.isFunction(countdownOptions.onStart) ? countdownOptions.onStart : null,
             onComplete: countdownOptions.onComplete && this.isFunction(countdownOptions.onComplete) ? countdownOptions.onComplete : null
         };
@@ -161,6 +162,7 @@ CountDownComponent.propDecorators = {
     'onComplete': [{ type: core.Output },],
     'object': [{ type: core.Input },],
     'singleFormat': [{ type: core.Input },],
+    'selectedtheme': [{ type: core.Input },],
 };
 var CountDownModule = (function () {
     function CountDownModule() {

@@ -9,6 +9,7 @@ export class CountDownComponent {
         this.date = " - ";
         this.onStart = new EventEmitter();
         this.onComplete = new EventEmitter();
+        this.selectedtheme = "default";
     }
     /**
      * @return {?}
@@ -33,7 +34,7 @@ export class CountDownComponent {
             timeInterval: this.time,
             object: this.object,
             format: this.singleFormat || countdownOptions.format,
-            theme: countdownOptions.theme + '-countdown-timer',
+            theme: this.selectedtheme + '-countdown-timer' || countdownOptions.theme + '-countdown-timer',
             onStart: countdownOptions.onStart && this.isFunction(countdownOptions.onStart) ? countdownOptions.onStart : null,
             onComplete: countdownOptions.onComplete && this.isFunction(countdownOptions.onComplete) ? countdownOptions.onComplete : null
         };
@@ -111,6 +112,7 @@ CountDownComponent.propDecorators = {
     'onComplete': [{ type: Output },],
     'object': [{ type: Input },],
     'singleFormat': [{ type: Input },],
+    'selectedtheme': [{ type: Input },],
 };
 function CountDownComponent_tsickle_Closure_declarations() {
     /** @type {?} */
@@ -144,6 +146,8 @@ function CountDownComponent_tsickle_Closure_declarations() {
     CountDownComponent.prototype.object;
     /** @type {?} */
     CountDownComponent.prototype.singleFormat;
+    /** @type {?} */
+    CountDownComponent.prototype.selectedtheme;
     /** @type {?} */
     CountDownComponent.prototype._countDownService;
 }
