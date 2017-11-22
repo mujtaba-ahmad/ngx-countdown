@@ -11,8 +11,8 @@ export class CountDownComponent implements OnInit {
   private finishTime: number;
   private timer: any;
 	private theme: string;
-  private countdown: ICountdownData;
-  private date: string = " - ";
+  public countdown: ICountdownData;
+  public date: string = " - ";
   @Input() time: number;
   @Output() onStart = new EventEmitter<string>();
   @Output() onComplete = new EventEmitter<string>();
