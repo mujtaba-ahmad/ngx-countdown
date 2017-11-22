@@ -1,5 +1,5 @@
 # ngx-countdown (Angular4 Countdown)
-Angular 4 countdown is compatible with latest release of angular 4.x.x. Click [click](http://plugins.mashup.li/#/plugins/ngx-countdown) to open sample application.
+Angular 4 countdown is compatible with latest release of angular 4.x.x. Click [here](http://plugins.mashup.li/#/plugins/ngx-countdown) to open Demo App.
 
 ## Functionality
 1. I can be applied anywhere in your web application.
