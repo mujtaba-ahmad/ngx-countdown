@@ -8,8 +8,7 @@ Angular 4 countdown is compatible with latest release of angular 4.x.x. Click [h
 4. It also shows 2 callback functions OnStart and onComplete, one calls when countdown starts and other when countdown stops.
 
 ## Installation
-- npm install ngx-countdown (Prefer)
-- Or you can manually download above dist folder and rename it to ngx-countdown and place it in node_modules folder of your application.
+- You can manually download above dist folder and rename it to ngx-countdown and place it in node_modules folder of your application.
 ## Usage
 Follow these steps:
 
