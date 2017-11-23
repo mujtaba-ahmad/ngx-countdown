@@ -1,5 +1,7 @@
 # ngx-countdown (Angular4 Countdown)
 Angular 4 countdown is compatible with latest release of angular 4.x.x.
+## Note
+Please use 'count-down-angular-4' branch. It has latest code and in working condition. 
 
 ## Functionality
 1. I can be applied anywhere in your web application.
