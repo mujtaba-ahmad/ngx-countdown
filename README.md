@@ -66,7 +66,7 @@ You can customize it further like this below
     onStart(data){
       console.log(data);
     }
-    onComplete(h){
+    onComplete(data){
       console.log(data);
     }
   }
